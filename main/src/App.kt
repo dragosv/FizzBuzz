@@ -1,34 +1,36 @@
 package org.dragosv.fizzbuzz
 
+import java.lang.Integer.parseInt
+
 fun main(args : Array<String>) {
-    val max = 1000;
+    var max = 1000
 
-    var fibonaciFirst: Int = 1;
-    var fibonaciSecond: Int = 2;
+    if (args.size > 0) {
+        max = parseInt(args[0])
+    }
 
-    println("1: FizzBuzz");
-    println("2: FizzBuzz");
+    var fibonaciFirst = 1
+    var fibonaciSecond = 2
 
-    var output: String;
-    var primes: MutableList<Int> = mutableListOf(2)
+    println("1: FizzBuzz")
+    println("2: FizzBuzz")
 
-    var isPrime = false;
-    var isFibonaci = false;
+    val primes = mutableListOf(2)
 
     for (i in 3..max) {
-        output = "";
+        var output = ""
 
         if (fibonaciFirst + fibonaciSecond == i) {
-            fibonaciFirst = fibonaciSecond;
-            fibonaciSecond = i;
+            fibonaciFirst = fibonaciSecond
+            fibonaciSecond = i
 
-            output = "Fizz";
+            output = "Fizz"
         }
 
         if (isPrimeNumber(primes, i)) {
-            primes.add(i);
+            primes.add(i)
 
-            output += "Buzz";
+            output += "Buzz"
         }
 
         println(i.toString()  + ": " + output)
@@ -44,22 +46,3 @@ fun isPrimeNumber(primes: List<Int>, number: Int) : Boolean {
 
     return true;
 }
-
-
-fun next(fibonaciFirst: Int, fibonaciSecond: Int, number: Int, max: Int)  {
-    if (number == max) return;
-
-    var newFibonaciFirst: Int;
-    var newFibonaciSecond: Int;
-
-    if (fibonaciFirst + fibonaciSecond == number) {
-        newFibonaciFirst = fibonaciSecond;
-        newFibonaciSecond = number;
-    } else {
-        newFibonaciFirst = fibonaciFirst;
-        newFibonaciSecond = fibonaciSecond;
-    }
-
-    next(newFibonaciFirst, newFibonaciSecond, number + 1, max);
-}
-
