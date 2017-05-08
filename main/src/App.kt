@@ -9,40 +9,19 @@ fun main(args : Array<String>) {
         max = parseInt(args[0])
     }
 
-    var fibonaciFirst = 1
-    var fibonaciSecond = 2
-
-    println("1: FizzBuzz")
-    println("2: FizzBuzz")
-
-    val primes = mutableListOf(2)
-
-    for (i in 3..max) {
+    for (number in Numbers.getNumbers(max)) {
         var output = ""
 
-        if (fibonaciFirst + fibonaciSecond == i) {
-            fibonaciFirst = fibonaciSecond
-            fibonaciSecond = i
-
+        if (number.isFibonaci) {
             output = "Fizz"
         }
 
-        if (isPrimeNumber(primes, i)) {
-            primes.add(i)
-
+        if (number.isPrime) {
             output += "Buzz"
         }
 
-        println(i.toString()  + ": " + output)
+        println(number.value.toString()  + ": " + output)
     }
 }
 
-fun isPrimeNumber(primes: List<Int>, number: Int) : Boolean {
-    for (prime in primes) {
-        if (number % prime == 0) {
-            return false;
-        }
-    }
 
-    return true;
-}
