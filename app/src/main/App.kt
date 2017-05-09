@@ -1,4 +1,4 @@
-package org.dragosv.fizzbuzz
+package main
 
 import java.lang.Integer.parseInt
 

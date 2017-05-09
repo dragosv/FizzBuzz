@@ -30,7 +30,7 @@ jar {
 }
 
 sourceSets {
-    main.java.srcDirs += 'main/src'
+    main.java.srcDirs += 'app/src/main'
 }
 
 dependencies {
