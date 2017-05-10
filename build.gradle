@@ -41,7 +41,7 @@ repositories {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'AppKt'
+        attributes 'Main-Class': 'org.dragosv.fizzbuzz.AppKt'
     }
 
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
