@@ -1,4 +1,4 @@
-package main
+package org.dragosv.fizzbuzz
 
 object Numbers {
     fun getNumbers(max: Int) : List<Number> {
