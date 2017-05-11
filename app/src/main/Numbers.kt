@@ -6,7 +6,8 @@ object Numbers {
         var fibonaciFirst = 1
         var fibonaciSecond = 2
 
-        list.add(Number(1, true, true))
+        list.add(Number(0, false, false))
+        list.add(Number(1, true, false))
         list.add(Number(2, true, true))
 
         val primes = mutableListOf(2)
