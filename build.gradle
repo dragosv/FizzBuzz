@@ -35,8 +35,8 @@ sourceCompatibility = 1.8
 mainClassName = "org.dragosv.fizzbuzz.AppKt"
 
 repositories {
-    maven { url "http://dl.bintray.com/jetbrains/spek" }
     mavenCentral()
+    jcenter()
 }
 
 jar {
