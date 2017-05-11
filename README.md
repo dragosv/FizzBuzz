@@ -11,3 +11,5 @@ If on Linux follow the [Post-installation steps](https://docs.docker.com/engine/
 From inside the main folder run this two commands
 - docker build . -t dragosv/fizzbuzz
 - docker run -e MAX_NUMBER='1000' dragosv/fizzbuzz 
+
+Change the MAX_NUMBER='1000' to something else if you want to see a different Max number

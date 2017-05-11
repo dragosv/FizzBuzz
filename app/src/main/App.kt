@@ -21,5 +21,3 @@ fun main(args : Array<String>) {
         println(number.value.toString()  + ": " + output)
     }
 }
-
-
