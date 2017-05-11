@@ -17,10 +17,10 @@ class NumbersSpec : Spek({
                 listOf(2, 3, 5, 7).should.equal(primes)
             }
 
-            it("should have expected fibonaci") {
-                val fibonacis = numbers.filter { it.isFibonaci }.map { it.value }.toList()
+            it("should have expected fibonacci") {
+                val fibonaccis = numbers.filter { it.isFibonacci }.map { it.value }.toList()
 
-                listOf(1,2, 3, 5, 8).should.equal(fibonacis)
+                listOf(1,2, 3, 5, 8).should.equal(fibonaccis)
             }
         }
     }

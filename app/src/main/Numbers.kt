@@ -3,8 +3,8 @@ package org.dragosv.fizzbuzz
 object Numbers {
     fun getNumbers(max: Int) : List<Number> {
         val list: MutableList<Number> = mutableListOf()
-        var fibonaciFirst = 1
-        var fibonaciSecond = 2
+        var fibonacciFirst = 1
+        var fibonacciSecond = 2
 
         list.add(Number(0, false, false))
         list.add(Number(1, true, false))
@@ -13,14 +13,14 @@ object Numbers {
         val primes = mutableListOf(2)
 
         for (i in 3..max) {
-            var isFibonaci = false
+            var isFibonacci = false
             var isPrime = false
 
-            if (fibonaciFirst + fibonaciSecond == i) {
-                fibonaciFirst = fibonaciSecond
-                fibonaciSecond = i
+            if (fibonacciFirst + fibonacciSecond == i) {
+                fibonacciFirst = fibonacciSecond
+                fibonacciSecond = i
 
-                isFibonaci = true
+                isFibonacci = true
             }
 
             if (isPrimeNumber(primes, i)) {
@@ -29,7 +29,7 @@ object Numbers {
                 isPrime = true
             }
 
-            list.add(Number(i, isFibonaci, isPrime))
+            list.add(Number(i, isFibonacci, isPrime))
         }
 
         return list

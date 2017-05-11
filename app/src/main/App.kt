@@ -10,7 +10,7 @@ fun main(args : Array<String>) {
     for (number in Numbers.getNumbers(max)) {
         var output = ""
 
-        if (number.isFibonaci) {
+        if (number.isFibonacci) {
             output = "Fizz"
         }
 
