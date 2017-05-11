@@ -1,6 +1,6 @@
 package org.dragosv.fizzbuzz
 
-import com.winterbe.expekt.should
+import org.amshove.kluent.shouldEqual
 import org.jetbrains.spek.api.Spek
 import org.jetbrains.spek.api.dsl.given
 import org.jetbrains.spek.api.dsl.it
@@ -14,13 +14,13 @@ class NumbersSpec : Spek({
             it("should have expected primes") {
                 val primes = numbers.filter { it.isPrime }.map { it.value }.toList()
 
-                listOf(2, 3, 5, 7).should.equal(primes)
+                listOf(2, 3, 5, 7) shouldEqual primes
             }
 
             it("should have expected fibonaci") {
                 val fibonacis = numbers.filter { it.isFibonaci }.map { it.value }.toList()
 
-                listOf(1,2, 3, 5, 8).should.equal(fibonacis)
+                listOf(1,2, 3, 5, 8) shouldEqual fibonacis
             }
         }
     }
