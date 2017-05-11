@@ -1,12 +1,10 @@
 package org.dragosv.fizzbuzz
 
-import java.lang.Integer.parseInt
-
 fun main(args : Array<String>) {
     var max = 1000
 
     if (args.size > 0) {
-        max = parseInt(args[0])
+        max = args[0].toInt()
     }
 
     for (number in Numbers.getNumbers(max)) {
