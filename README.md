@@ -1,5 +1,5 @@
 **FizzBuzz++**
-- Write a program that prints the integers from 0 to 1000 
+- Write a program that prints the integers from 0 to n (default 1000) 
 - Print 'Fizz' for fibonacci numbers and 'Buzz' for prime numbers
 
 **To run this**
@@ -10,4 +10,4 @@ If on Linux follow the [Post-installation steps](https://docs.docker.com/engine/
 
 From inside the main folder run this two commands
 - docker build . -t dragosv/fizzbuzz
-- docker run dragosv/fizzbuzz
+- docker run -e MAX_NUMBER='1000' dragosv/fizzbuzz 
